@@ -105,7 +105,8 @@ def run():
 				client_id=config['client'],
 				client_secret=config['secret'],
 				redirect_uri='http://localhost:3000',
-				scope='user-read-recently-played'))
+				scope='user-read-recently-played',
+                open_browser=False,))
 
 			results = sp.current_user_recently_played(limit=50)
 			results = results['items']
